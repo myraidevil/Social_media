@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 
-app.get('/', (req, res) => res.send('server is running'));
+app.get('/', (req, res) => res.json({message : 'server is running'}));
 
 app.use('/api/inngest', serve({client: inngest, functions}));
 
